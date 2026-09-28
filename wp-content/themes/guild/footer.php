@@ -5,10 +5,10 @@
     <div class="container">
 
         <div class="row position-relative align-items-center pb-3">
-            <div class="col-3">
+            <div class="col-12 col-md-3">
                 <img src="<?php echo get_template_directory_uri() ?>/images/the_iron_claw_syndicate_transparent_logo.png" alt="logo">
             </div>
-            <div class="col-9">
+            <div class="col-12 col-md-9">
                 <?php if (is_active_sidebar('custom-footer-text-widget')): ?>
                     <div id="header-widget-area" class="chw-widget-area widget-area pt-3" role="complementary">
                         <?php dynamic_sidebar('custom-footer-text-widget');?>
@@ -29,7 +29,7 @@
                         <li><a class="linkedin" href="#" target="_blank" alt="LinkedIn"> <i class="visually-hidden sr-only">Linkedin</i> </a></li>
                     </ul>
                 </div>
-                <div class="copyright pt3">
+                <div class="copyright pt-3">
                     <?php hm_get_template_part('template-parts/navigation/navigation-below-footer');?>
                 </div>
             </div>

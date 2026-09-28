@@ -4589,7 +4589,7 @@ sub {
 .disable-focus-styles :focus {
   outline: none;
 }
-*********************************************************************************
+/* ********************************************************************************
 This file contains all the neccessary styles to control how your forms looks
 throughout your site. Styles for form fields, buttons, inputs, etc.
 *********************************************************************************

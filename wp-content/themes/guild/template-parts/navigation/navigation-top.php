@@ -3,18 +3,16 @@ global $have_bg;
 ?>
 
 <header id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3 <?php echo $have_bg ?>" style="z-index: 100">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3 <?php echo esc_attr($have_bg); ?>" style="z-index: 100">
         <div class="container">
-            <?php
-            if (function_exists('the_custom_logo')) {
-                the_custom_logo();
-            } else { ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home">
-                <img width="1333" height="1392" src="<?php echo get_theme_file_uri( 'images/the_iron_claw_syndicate_transparent_logo.png' ); ?>" class="custom-logo" alt="The Ironclaw Syndicate" decoding="async" fetchpriority="high">
-            </a>
-            <?php 
-            }
-            ?>
+            <?php if (has_custom_logo()) : ?>
+                <?php the_custom_logo(); ?>
+            <?php else : ?>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home">
+                    <img width="1333" height="1392" src="<?php echo get_theme_file_uri( 'images/the_iron_claw_syndicate_transparent_logo.png' ); ?>" class="custom-logo" alt="The Ironclaw Syndicate" decoding="async" fetchpriority="high">
+                </a>
+            <?php endif; ?>
+            
             <?php $blog_info = get_bloginfo( 'name' ); ?>
             <?php if ( ! empty( $blog_info ) ) : ?>
                 <div class="top_branding">

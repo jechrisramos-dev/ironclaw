@@ -1,6 +1,14 @@
 <?php if (is_active_sidebar('custom-footer1-widget')): ?>
     <div id="footer-widget-area_1" class="col-12 col-md-4 widget-area pt-3" role="complementary">
         <?php dynamic_sidebar('custom-footer1-widget');?>
+        <?php wp_nav_menu(
+            [
+                'theme_location' => 'footer',
+                'menu_class' => 'list-unstyled',
+                'container_class' => 'menu',
+                'container_id' => 'menu-footer-menu-1',
+            ]
+        );?>
     </div>
 <?php endif;?>
 <?php if (is_active_sidebar('custom-footer2-widget')): ?>
